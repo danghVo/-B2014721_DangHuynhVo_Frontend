@@ -5,7 +5,7 @@ class ContactService {
         this.api = contactAPIClient(baseURL);
     }
 
-    async getAll(name = {}) {
+    async getAll(name = []) {
         return (await this.api.get(`/${name}`)).data
     }
 
