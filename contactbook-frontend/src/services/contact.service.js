@@ -27,11 +27,11 @@ class ContactService {
     }
 
     async get(id) {
-        return (await this.api.post(`/${id}`)).data
+        return (await this.api.get(`/${id}`)).data
     }
 
     async update(id, data) {
-        return (await this.api.put(`/${id}`, data)).data
+        return (await this.api.put(`/${id}`, data))
     }
 
     async delete (id) {

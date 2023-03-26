@@ -20,7 +20,7 @@
                 </button>
 
                 <button class="btn btn-sm btn-success" @click="goToAddContact">
-                    <i class="fas fa-plus"></i> Thêm mới
+                        <i class="fas fa-plus"></i> Thêm mới
                 </button>
 
                 <button class="btn btn-sm btn-danger" @click="removeAllContacts">
@@ -36,6 +36,11 @@
                         <i class="fas fa-address-card"></i>
                     </h4>
                     <ContactCard :contact="activeContact" />
+                    <router-link  :to="{name: 'contact.edit', params: {id: activeContact._id}}">
+                        <span class="mt-2 badge badge-warning">
+                            <i class="fas fa-edit"></i> Hiệu chỉnh
+                        </span>                      
+                    </router-link>
                 </div>
             </div>
     </div>
